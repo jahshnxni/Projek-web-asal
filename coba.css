@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px untuk kemudahan dalam pengukuran */
+}
+
+body {
+    max-width: 1200px; /* Atur lebar maksimal agar tetap terlihat baik di layar besar */
+    margin: 0 auto; /* Agar konten tetap di tengah */
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 249, 249);
+}
+
+#chart {
+    width: 80%; /* Menggunakan persentase agar lebih fleksibel */
+    margin: 2rem auto; /* Posisikan chart di tengah dengan margin */
+}
+
+#info {
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+/* Navigasi di bawah lebar layar 995px */
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 100%; /* Ubah lebar menjadi 100% agar memenuhi layar pada mobile */
+        background-color: #161616;
+        padding: 2rem;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9%;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('css/web.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    text-align: center;
+}
+
+.container{
+    width: 246px;
+    overflow: hidden;
+}
+.container .text{
+    position: relative;
+    color: #4070F4;
+    font-size: 30px;
+    font-weight: 600;
+}
+.container .text.first-text{
+    color: #FFF;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #010718;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+/* Gunakan persentase pada elemen home agar lebih fleksibel */
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #b74b4b;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.home-img img {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #b74b4b;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    transform: scale(1.03);
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 2rem 1.5rem;
+    transition: 0.3s ease;
+    color: #b74b4b;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #b74b4b;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.typing-text {
+    font-size: 3.4rem;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Tampilan khusus untuk mobile */
+@media (max-width: 600px) {
+    html {
+        font-size: 55%; /* Mengurangi font-size agar lebih proporsional di mobile */
+    }
+
+    body {
+        width: 100%; /* Biarkan body menggunakan 100% dari lebar layar pada mobile */
+    }
+
+    .home-content h1 {
+        font-size: 4rem; /* Kurangi ukuran h1 untuk perangkat kecil */
+    }
+
+    .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .home-img img {
+        width: 80%; /* Sesuaikan ukuran gambar untuk mobile */
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.4rem; /* Kurangi ukuran tombol agar proporsional di mobile */
+    }
+}

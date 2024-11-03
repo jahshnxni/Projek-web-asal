@@ -1,0 +1,170 @@
+/* Global Styles */
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* About Section */
+.about-section {
+    text-align: left;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.about-section h1 {
+    color: #58a6ff;
+    font-size: 2.5em;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.about-section a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+/* Profile Card */
+.profile-card {
+    background-color: #161b22;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.profile-card img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.profile-card h2 {
+    color: #c9d1d9;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.profile-card p {
+    color: #8b949e;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.profile-card .social-icons {
+    margin-top: 10px;
+}
+
+.profile-card .social-icons a {
+    color: #c9d1d9;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* Journey Section */
+.journey-section {
+    text-align: center;
+    max-width: 800px;
+}
+
+.journey-section h2 {
+    color: #58a6ff;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.journey-section .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.journey-section .skills .skill {
+    background-color: #161b22;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    color: #c9d1d9;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.journey-section .skills .skill img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+/* Card Slider - Fixed Version */
+.card-holder-wrapper {
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.card-holder {
+    display: flex;
+    gap: 10px;
+    animation: slide 30s linear infinite;
+    width: max-content; /* Ensures all cards are in one line */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 5px)); /* Adjusted for smoother loop */
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.card img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Section Buttons */
+.section-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.section-button {
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
